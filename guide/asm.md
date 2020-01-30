@@ -21,9 +21,9 @@ In the statement, we can use some operand placeholders to refer to variables of 
 
 #### Byte Limited Character
 The byte limited character is between '%' and the No. of a variable, which indicates the bytes to use. Here I'd like to introduce three kinds of limited characters as below:
-* b: represent low byte
-* h: represent high byte
-* w: represent two bytes
+* **b**: represent low byte
+* **h**: represent high byte
+* **w**: represent two bytes
 
 ### 2. Output Part
 This part describes output operands. They are separated by a comma symbol. Each output operand consists of a limited string and a variable of C language. Note that the limited string of each output operand must contains '=' to indiacte that the operand is an output operand. As for the example above, "=a"(data) is an output operand. "=a" is the limited string and (data) is the C language variable.
@@ -31,7 +31,10 @@ This part describes output operands. They are separated by a comma symbol. Each 
 ### 3. Input Part
 This part describes input operands. Similarly to the output part, input operand are separated by a comma symbol and each input operand consists of a limited string and a C language variable, too.
 
-### 4. Limited Char
-This part will be finished later.
+### 4. Limited Chars List
+* **general register**: for example, 'a' refers to eax
+* **memory**: 'm' refers to memory variables
+* **operand type**: '=' indicates that the operand is only writable, while '+' indicates that the operand is both readable and writable.
+
 ## Reference
 http://blog.chinaunix.net/uid-26928658-id-4787852.html
